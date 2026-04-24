@@ -206,11 +206,6 @@ const POSES = [
   },
 ];
 
-const getTodayKey = () => {
-  const d = new Date();
-  return `morning-done-${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
-};
-
 export default function App() {
   const [lang, setLang] = useState("en");
   const [started, setStarted] = useState(false);
