@@ -251,7 +251,11 @@ export default function App() {
     clearTimeout(timerRef.current);
     setTimerActive(false);
     setTimeLeft(null);
-    setCurrentStep(s => Math.max(0, s - 1));
+    if (currentStep === 0) {
+      setStarted(false);
+    } else {
+      setCurrentStep(s => s - 1);
+    }
   };
 
   const reset = () => {
@@ -382,9 +386,7 @@ export default function App() {
 
       {/* Navigation */}
       <div style={S.navRow}>
-        {currentStep > 0 ? (
-          <button onClick={goPrev} style={S.prevBtn}>{ui.prevBtn}</button>
-        ) : <div />}
+        <button onClick={goPrev} style={S.prevBtn}>{ui.prevBtn}</button>
         <button
           onClick={goNext}
           style={{ ...S.nextBtn, background: pose.color }}

@@ -114,13 +114,13 @@ function KneelingChestStretch({ color }) {
 
 function ThoracicBlock({ color }) {
   return (
-    <>
+    <g transform="translate(120 0) scale(-1 1)">
       <circle cx="96" cy="72" r="5" fill={color} stroke="none" />
       <rect x="92" y="77" width="8" height="17" />
       <path d="M 96 77 Q 85 80 74 77" />
       <rect x="66" y="77" width="8" height="17" />
       <path d="M 66 79 L 38 93 L 12 93" />
-    </>
+    </g>
   );
 }
 
