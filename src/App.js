@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { PoseFigure } from "./PoseFigures";
 
 const LANG_UI = {
   en: {
@@ -96,22 +97,22 @@ const POSES = [
   },
   {
     id: "p3",
-    name: { en: "Cow Face Pose (Lower Body)", zh: "牛面式（下半身）" },
+    name: { en: "Cow Face Pose (Upper Body)", zh: "牛面式（上半身）" },
     duration: { en: "45–60 sec · each side", zh: "每侧 45–60 秒" },
     holdSec: 50,
     reps: false,
     sides: true,
     instruction: {
-      en: "Sit on the floor. Cross your LEFT leg on top — left knee stacked over right knee. Sit tall. If this is uncomfortable, sit on a folded blanket. Hold the position and breathe. You should feel a deep stretch in the top hip (left glute and piriformis). Switch sides.",
-      zh: "坐在地板上。将左腿叠在上方 — 左膝叠在右膝上方。坐直。若感到不适，可坐在折叠毯上。保持姿势并呼吸。应感受到上侧髋部（左臀和梨状肌）的深度拉伸。换侧进行。",
+      en: "Sit in a simple cross-legged position. Sit tall — if your lower back rounds, sit on a folded blanket. Reach one arm up overhead, then bend the elbow so your hand drops between your shoulder blades. Bring your other arm behind your back, bend that elbow, and reach up to clasp your fingers. Hold and breathe. Release slowly and switch arms.",
+      zh: "以简单盘坐姿势坐下。坐直 — 若下背拱起，可坐在折叠毯上。一只手臂向上举过头顶，然后弯曲肘部，让手掌落至两侧肩胛骨之间。另一只手臂绕到背后，弯曲肘部，向上伸手扣住手指。保持并呼吸。缓慢松开，换侧进行。",
     },
     tip: {
-      en: "Focus on the LEFT side first and longer — your left piriformis is tighter. Don't worry if you can't stack the knees fully. Just sit in the crossed position.",
-      zh: "先重点做左侧，保持时间更长 — 你的左侧梨状肌更紧张。不用担心膝盖无法完全叠放。只需保持交叉坐姿即可。",
+      en: "Don't force the clasp — if your hands don't meet, hold a strap, towel, or edge of a t-shirt between them. Keep your chest lifted and shoulders down away from your ears. Breathe into the stretch rather than gripping.",
+      zh: "不要强行合掌 — 若两手无法相触，可用伸展带、毛巾或T恤下摆连接两手。保持胸口上提，双肩下沉远离耳朵。将呼吸带入拉伸，不要紧绷。",
     },
     why: {
-      en: "Directly releases your tight LEFT piriformis — the muscle compressing your sciatic nerve and contributing to your pelvic rotation. This is one of the root causes of your pain.",
-      zh: "直接放松你紧绷的左侧梨状肌 — 该肌肉正在压迫坐骨神经并导致骨盆旋转。这是你疼痛的根本原因之一。",
+      en: "Opens the thoracic spine, shoulders, and chest — directly counteracting the forward-rounded posture that tightens your upper back. Complements the prone pectoral stretch and thoracic block release later in the routine.",
+      zh: "打开胸椎、肩膀和胸部 — 直接对抗导致上背紧绷的前倾圆肩姿势。与例程后段的俯卧胸肌伸展和瑜伽砖胸椎放松相辅相成。",
     },
     color: "#5b9e8f",
     emoji: "🧘",
@@ -162,25 +163,25 @@ const POSES = [
   },
   {
     id: "p6",
-    name: { en: "Prone Pectoral Stretch", zh: "俯卧胸肌伸展" },
+    name: { en: "Kneeling Chest Stretch", zh: "跪姿胸部伸展" },
     duration: { en: "45–60 sec · each side", zh: "每侧 45–60 秒" },
     holdSec: 50,
     reps: false,
     sides: true,
     instruction: {
-      en: "Lie face down. Extend your RIGHT arm out to the side at shoulder height, palm facing down. Gently roll onto your right side, using your left hand and left foot to control the rotation. Feel the stretch across your right chest and shoulder. Hold, breathe. Return to centre and switch to left arm.",
-      zh: "俯卧。将右臂向侧面伸展至肩膀高度，手掌朝下。用左手和左脚控制身体，轻柔地向右侧翻转。感受右侧胸部和肩膀的拉伸。保持并呼吸。回到中央后换左臂。",
+      en: "Start on hands and knees with knees hip-width apart and hips stacked over your knees. Slide one arm straight forward along the floor, palm down, and lower that shoulder and the side of your chest toward the mat — rest your forehead or temple lightly down. Keep the other arm bent, hand pressing into the floor beside your chest to support your weight. Hips stay over your knees. Breathe into the stretch through the extended arm's chest, shoulder, and lat. Switch sides.",
+      zh: "从手膝跪姿开始，双膝与髋同宽，髋部正对膝盖上方。一只手臂沿地面向前伸直，掌心朝下，让该侧肩膀和胸侧向垫子下沉 — 额头或太阳穴轻轻贴地。另一只手臂保持弯曲，手掌按在胸部旁的地面上以支撑身体重量。髋部保持在膝盖正上方。呼吸，将拉伸感带入伸展手臂一侧的胸部、肩膀和背阔肌。换侧进行。",
     },
     tip: {
-      en: "The RIGHT side stretch is more important for you — your right upper back was tighter. Go very slowly when rolling. Never force the shoulder.",
-      zh: "右侧拉伸对你更重要 — 你的右侧上背更紧绷。翻转时非常缓慢。绝不要强迫肩膀。",
+      en: "Hips must stay over the knees — if they drift back to your heels, the stretch leaves your chest. The bent support arm carries real weight; press the palm down actively so the extended-side shoulder can melt toward the floor instead of bracing.",
+      zh: "髋部必须保持在膝盖正上方 — 若向后漂移至脚跟，拉伸会离开胸部。弯曲的支撑手臂承担真实的重量；主动将掌心下压，让伸展侧的肩膀能向地面融化，而不是紧绷支撑。",
     },
     why: {
-      en: "Directly targets your tight right upper back and thoracic spine. Releases the pectoral and anterior shoulder which pull your thoracic spine into flexion and contribute to your upper back restriction.",
-      zh: "直接针对你紧绷的右侧上背和胸椎。释放胸肌和肩前侧，这些肌肉将胸椎拉入屈曲并导致上背受限。",
+      en: "The asymmetric position isolates one side of the chest, front shoulder, and lat at a time, allowing a deeper opening than a symmetric stretch. Directly counteracts the rounded upper-back posture that tightens your chest and restricts your thoracic spine.",
+      zh: "不对称的姿势每次只针对一侧的胸部、肩前侧和背阔肌，比对称拉伸能带来更深的打开。直接对抗导致胸部紧绷和胸椎受限的上背圆肩姿势。",
     },
     color: "#9b6fd4",
-    emoji: "🦅",
+    emoji: "🙏",
   },
   {
     id: "p7",
@@ -325,7 +326,9 @@ export default function App() {
       <div style={S.poseCard}>
         <div style={{ ...S.poseColorBar, background: pose.color }} />
         <div style={S.poseCardInner}>
-          <div style={S.poseEmoji}>{pose.emoji}</div>
+          <div style={S.poseFigure}>
+            <PoseFigure id={pose.id} color={pose.color} size={96} />
+          </div>
           <div style={{ ...S.poseName, color: pose.color }}>{pose.name[lang]}</div>
           <div style={S.poseDuration}>{pose.duration[lang]}{pose.sides ? ` · ${ui.eachSide}` : ""}</div>
 
@@ -436,6 +439,7 @@ const S = {
   poseColorBar: { height: 3 },
   poseCardInner: { padding: "20px 18px" },
   poseEmoji: { fontSize: 36, marginBottom: 8 },
+  poseFigure: { marginBottom: 8, marginTop: -4, display: "flex", alignItems: "center" },
   poseName: { fontSize: 22, fontWeight: 400, fontStyle: "italic", marginBottom: 4, letterSpacing: -0.5 },
   poseDuration: { fontSize: 11, color: "rgba(255,255,255,0.4)", fontFamily: "monospace", marginBottom: 16, letterSpacing: 0.5 },
 
